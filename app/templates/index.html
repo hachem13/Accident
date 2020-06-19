@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="static/style.css" />
+  <title>DATA VISE</title>
+</head>
+<body>
+  <h1>BIENVENUE DANS L'APPLICATION D'ACCIDENTOLOGIE</h1><br />
+  <h2>Voici une analyse des accidents de la route </h2><br />
+  <h4>Veuillez remplir le formulaire :</h4><br />
+    <p> <!-- picture -->
+      <img src="/static/images/accident.jpg" alt="accident" />
+    </p>
+    <div> <!-- tag year -->
+      <form action ="{{ url_for('dashboard') }}"  method="post">
+        <label for="year" type = text>Choisir une Année :</label>
+        {{ form.crsf_token }} <!--  -->
+        {{ form.year }}
+        <ul>
+        {% for error in form.year.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+        </ul> 
+        <div calss = gravity><!-- cheackbox gravity -->
+          Cochez une ou plusieurs cases pour la gravité de l'accident : <br/> 
+          <input type="checkbox" name="unhurt" value="1" id = 'unhurt' />Indemnes<label for = 'unhurt'></label><br/>
+          <input type="checkbox" name="dead" value="2" id = 'dead' />Tués<label for ='dead'></label><br/>
+          <input type="checkbox" name="hospitalize" value="3" id= 'hospitalize'  /> Blessés hospitalisés<label for = 'hospitalize'></label><br/>
+          <input type="checkbox" name="hurt_light" value="4" id = 'hurt_light' />Blessés légers<label for = 'hurt_light'></label><br/>
+        </div><br />
+        <div calss = gender> <!-- cheackbox gender -->
+
+          Cochez une ou plusieurs cases pour le sexe de l'usager : <br/> 
+        
+          <input type="checkbox" name="men" value="1" id = 'men' />Hommes<label for = 'men'></label><br/>
+          <input type="checkbox" name="women" value="2" id = 'women' />Femmes<label for ='women'></label><br/>
+        </div><br />
+
+        <div class= 'departement' >
+          <label for="departement">Départements : </label> <!-- dropdown list departement-->
+          <select class="departement" name = departement id="departement">
+            <option value=10>{{ list_nom_departement[0] }}</option>
+            {% for y in list_code_departement %}
+              <option value={{ y }}>{{ list_nom_departement[loop.index] }}</option>
+            {% endfor %}
+            </select>
+          </div>
+        <p> <input type="submit" value="Envoyer" /> </p> <!-- submit button -->
+      </form>
+    </div>
+</body>
+</html>
