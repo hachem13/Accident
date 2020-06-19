@@ -1,0 +1,61 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(191, 210, 211, 0.297);
+    
+}
+
+h1 {
+    color: rgba(49, 49, 187, 0.831);
+    margin-left: 40px;
+    text-align :center;
+    
+}
+.container .row .col-md-6  h4{
+    color: rgb(34, 103, 153);
+    margin-top: 0px;
+    font-size: 20px;
+    font-style: italic;
+    
+}
+h2{
+    color: rgb(120, 159, 156);
+    margin-top: 0px;
+    text-align :center;
+    font-size: 30px;
+    font-style: italic;
+    
+}
+
+img{
+    float: right;
+    width: 45%;
+    height: 45%;
+    opacity: 0.5;
+}
+
+#bar
+{
+    width: 47%;
+    height:150%;
+    margin-left:2%;
+    float:left;
+    
+}
+
+#bar1
+{
+    width: 47%;
+    height:200%;
+    margin-right:2%;
+    float :right;
+    
+}
+.chart1, #bar1{
+    float:left;
+}
+.titre{
+    color: rgb(34, 103, 153);
+    margin-top: 0px;
+    font-size: 20px;
+    font-style: italic;
+}
