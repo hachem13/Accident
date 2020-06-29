@@ -22,6 +22,12 @@
           <li>{{ error }}</li>
         {% endfor %}
         </ul> 
+        <div>
+        <label for="age1" type = text>Choisir un âge :</label>
+        {{ form.age1 }}
+        <label for="age2" type = text>et </label> <!--  -->
+        {{ form.age2 }} 
+        </div> <br/>
         <div calss = gravity><!-- cheackbox gravity -->
           Cochez une ou plusieurs cases pour la gravité de l'accident : <br/> 
           <input type="checkbox" name="unhurt" value="1" id = 'unhurt' />Indemnes<label for = 'unhurt'></label><br/>
