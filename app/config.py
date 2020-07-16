@@ -59,7 +59,7 @@ def create_plot1(year):
     with urlopen('https://france-geojson.gregoiredavid.fr/repo/departements.geojson') as response:
         geojson = json.load(response)
     names=['code_departement', 'nom_departement', 'code_region', 'nom_region']
-    df = pd.read_csv('/Users/mosbahhachem/Documents/git/Accident/departements-france.csv',
+    df = pd.read_csv('/Users/mosbahhachem/Documents/git/Projet_Accident/departements-france.csv',
                                 header=None, skiprows=[0], names=names)
 
 
@@ -98,7 +98,7 @@ def create_plot2(year):
     with urlopen('https://france-geojson.gregoiredavid.fr/repo/departements.geojson') as response:
         geojson = json.load(response)
     names=['code_departement', 'nom_departement', 'code_region', 'nom_region']
-    df = pd.read_csv('/Users/mosbahhachem/Documents/git/Accident/departements-france.csv',
+    df = pd.read_csv('/Users/mosbahhachem/Documents/git/Projet_Accident/departements-france.csv',
                                 header=None, skiprows=[0], names=names)
 
 

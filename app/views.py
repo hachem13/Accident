@@ -26,7 +26,7 @@ def index():
   """ call index.html in template """
 # treatment of dataframe and query
   names=['code_departement', 'nom_departement', 'code_region', 'nom_region']
-  df = pd.read_csv('/Users/mosbahhachem/Documents/git/Accident/departements-france.csv',
+  df = pd.read_csv('/Users/mosbahhachem/Documents/git/Projet_Accident/departements-france.csv',
                             header=None, skiprows=[0], names=names)
   list_code_departement = df.code_departement.tolist()
   list_nom_departement = df.nom_departement.tolist()
